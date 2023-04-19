@@ -1,7 +1,6 @@
 const workerValidation = (req, res, next) => {
-    return (req, res, next) => {
-        next()
-    }
+    return next()
+    
     if (req.body.name !== undefined) {
         if (req.body.name === '') {
             res.status(406).json({

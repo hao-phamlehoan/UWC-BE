@@ -28,7 +28,7 @@ class RouteModel extends Model {
                             route.paths = [...results]
 
                             return this.query(
-                                'SELECT M.id, M.status, M.address FROM mcp M, mcpinroute MCR, route R WHERE R.id = MCR.routeId AND M.id = MCR.mcpId AND R.id = ?',
+                                'SELECT M.id, M.status, M.address FROM mcp M, mcpInRoute MCR, route R WHERE R.id = MCR.routeId AND M.id = MCR.mcpId AND R.id = ?',
                                 [routeId]
                             )
                         })
@@ -66,7 +66,7 @@ class RouteModel extends Model {
                 route.paths = [...results]
 
                 return this.query(
-                    'SELECT M.id, M.status, M.address FROM mcp M, mcpinroute MCR, route R WHERE R.id = MCR.routeId AND M.id = MCR.mcpId AND R.id = ?',
+                    'SELECT M.id, M.status, M.address FROM mcp M, mcpInRoute MCR, route R WHERE R.id = MCR.routeId AND M.id = MCR.mcpId AND R.id = ?',
                     [id]
                 )
             })

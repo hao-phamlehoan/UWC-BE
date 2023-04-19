@@ -1,7 +1,6 @@
 const validateEmail = (req, res, next) => {
-    return (req, res, next) => {
-        next()
-    }
+    return next()
+    
     let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
     if (req.body.email !== undefined) {

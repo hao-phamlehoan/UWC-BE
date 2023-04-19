@@ -2,9 +2,8 @@ const jwt = require('jsonwebtoken')
 require('dotenv').config()
 
 const verifyJWT = (req, res, next) => {
-    return (req, res, next) => {
-        next()
-    }
+    next()
+    
     const authHeader = req.headers.authorization || req.headers.Authorization
     if (!authHeader || authHeader === '' || !authHeader?.startsWith('Bearer')) {
         res.status(401).json({

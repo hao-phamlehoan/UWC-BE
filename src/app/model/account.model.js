@@ -19,7 +19,9 @@ class AccountModel extends Model {
                     throw Error('email doesn\'t exist');
                 else {
                     let hash = results[0].password
-                    return bcrypt.compare(password, hash)
+                    console.log(hash)
+                    console.log(password)
+                    return password = hash
                 }
             })
             .then(isMatch => {

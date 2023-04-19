@@ -1,7 +1,5 @@
 const validatePassword = (req, res, next) => {
-    return (req, res, next) => {
-        next()
-    }
+    return next()
     let password = req.body.newPassword || req.body.password
 
     let characterConstrain = /(\w+)/
