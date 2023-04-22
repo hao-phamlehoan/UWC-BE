@@ -39,8 +39,8 @@ class WorkerController {
         let newWorker = req.body
 
         // create a random string password
-        let password = new randexp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/).gen()
-        newWorker.password = password
+        // let password = new randexp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/).gen()
+        // newWorker.password = password
 
         workerModel.create(newWorker, (status, result, message, password) => {
             workerView.create(res, status, result, message, password)

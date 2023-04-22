@@ -120,7 +120,7 @@ class WorkerModel extends Model {
                     name: newWorker.name,
                     email: newWorker.email,
                     phone: newWorker.phone,
-                    password: hash
+                    password: newWorker.password
                 }
             ))
             .then(results => this.query(
